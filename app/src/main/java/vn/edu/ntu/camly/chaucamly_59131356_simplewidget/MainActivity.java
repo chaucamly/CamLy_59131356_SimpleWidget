@@ -11,21 +11,24 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import java.lang.reflect.Array;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
     EditText edtTen, edtNS, edtStk;
     RadioGroup checkRdo;
     CheckBox cbXp, cbNn, cbCf, cbOn, cbNa;
     Button btXn;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         adViews();
         addEvents();
     }
 
-    private void adViews() {
+    private void adViews()
+    {
         edtTen = findViewById(R.id.edtTen);
         edtNS = findViewById(R.id.edtNS);
         edtStk = findViewById(R.id.edtStk);
@@ -37,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         cbNa = findViewById(R.id.cbNa);
         btXn = findViewById(R.id.btXn);
 
-        cbXp.setOnClickListener(new View.OnClickListener() {
+        cbXp.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 if(cbXp.isChecked()){
@@ -47,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        cbNn.setOnClickListener(new View.OnClickListener() {
+        cbNn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 if(cbNn.isChecked()){
@@ -57,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        cbCf.setOnClickListener(new View.OnClickListener() {
+        cbCf.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 if(cbCf.isChecked()){
@@ -67,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        cbOn.setOnClickListener(new View.OnClickListener() {
+        cbOn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 if(cbOn.isChecked()){
@@ -77,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        cbNa.setOnClickListener(new View.OnClickListener() {
+        cbNa.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 if(cbNa.isChecked()){
@@ -90,19 +98,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void addEvents() {
+    private void addEvents()
+    {
         btXn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                thucThi();
+                ThucThi();
             }
         });
     }
 
-    private void thucThi() {
+    private void ThucThi()
+    {
         String Result = "";
-        Result = edtTen.getText() + "\n" +
-                "Ngày Sinh: " + edtNS.getText() + "\n";
+        Result = edtTen.getText() + "\n" +  "Ngày Sinh: " + edtNS.getText() + "\n";
         switch (checkRdo.getCheckedRadioButtonId()) {
             case R.id.rdNam:
                 Result += "Giới Tính: " + "Nam" + "\n" + "Sở Thích: ";
@@ -115,9 +124,8 @@ public class MainActivity extends AppCompatActivity {
         Result += CheckBoxAction();
         Toast.makeText(MainActivity.this, Result, Toast.LENGTH_SHORT).show();
     }
-
-
-        private String CheckBoxAction () {
+        private String CheckBoxAction ()
+        {
         String Result = "";
         CheckBox[] arrCb = new CheckBox[]{cbXp, cbNn, cbCf, cbOn, cbNa};
         for (int i = 0; i < arrCb.length; i++) {
@@ -125,10 +133,9 @@ public class MainActivity extends AppCompatActivity {
                 Result += arrCb[i].getText().toString() + "; ";
             }
         }
-
         Result += edtStk.getText();
-        return Result;
-    }
+            return Result;
+        }
 }
 
 

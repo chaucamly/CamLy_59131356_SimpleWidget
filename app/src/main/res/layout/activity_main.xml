@@ -4,29 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="15sp"
         android:text="Tên của Bạn" />
-
     <EditText
         android:id="@+id/edtTen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Nhập tên bạn vào đây"
-        android:inputType="textPersonName" />
-
+        android:inputType="textPersonName"
+        />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="15sp"
         android:text="Ngày sinh" />
-
     <EditText
         android:id="@+id/edtNS"
         android:layout_width="match_parent"
@@ -34,90 +34,87 @@
         android:ems="10"
         android:hint="Nhập ngày sinh vào đây"
         android:inputType="date" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         android:text="Giới tính" />
-
     <RadioGroup
-        android:id="@+id/checkradio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:id="@+id/checkradio"
+        >
         <RadioButton
             android:id="@+id/rdNam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:buttonTint="@color/red"
-            android:checked="true"
             android:text="Nam" />
-
         <RadioButton
             android:id="@+id/rdNu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="true"
+            android:buttonTint="@color/red"
             android:text="Nữ" />
     </RadioGroup>
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sở Thích" />
-
+        android:textSize="16sp"
+        android:text="Sở thích của bạn: " />
     <CheckBox
         android:id="@+id/cbXp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/colored_checkbox"
         android:text="Xem phim" />
-
     <CheckBox
         android:id="@+id/cbNn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/colored_checkbox"
         android:text="Nghe nhạc" />
-
     <CheckBox
         android:id="@+id/cbCf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/colored_checkbox"
         android:text="Đi cafe với bạn bè" />
-
     <CheckBox
         android:id="@+id/cbOn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/colored_checkbox"
         android:text="Ở nhà một mình" />
-
     <CheckBox
         android:id="@+id/cbNa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/colored_checkbox"
         android:text="Vào bếp nấu ăn" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sở thích khác:" />
-
+        android:textSize="16sp"
+        android:text="Sở Thích khác:" />
     <EditText
         android:id="@+id/edtStk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nhập sở thích Khác..."
+        android:hint="Nhập Sở thích Khác"
         android:inputType="textPersonName" />
-
     <Button
         android:id="@+id/btXn"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:textSize="14sp"
         android:text="XÁC NHẬN" />
 </LinearLayout>
